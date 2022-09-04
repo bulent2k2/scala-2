@@ -26,6 +26,7 @@ class MainClass extends Driver with EvalLoop {
   override def newCompiler(): Global = Global(settings)
 
   override def doCompile(compiler: Global): Unit = {
+    println("[Kojo] Scala Compiler v2.13.8 with Turkish keywords")
     if (settings.resident) resident(compiler)
     else super.doCompile(compiler)
   }
